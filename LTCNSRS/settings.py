@@ -28,9 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['ltcnsrs.onrender.com', 'http://localhost:5173', 'ltcnsrs-server.onrender.com', 'ltcnsrs.netlify.app', 'http://localhost:3000']
+ALLOWED_HOSTS = ['ltcnsrs.onrender.com', 'http://localhost:5173', 'ltcnsrs-server.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = []
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -150,7 +152,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://ltcnsrs-server.onrender.com",
     "https://ltcnsrs.onrender.com",
     "https://ltcnsrs.netlify.app",
-    "http://localhost:3000"
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
+
 ]
 
 # Email configuration
